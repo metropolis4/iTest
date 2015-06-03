@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "body-parser": "^1.12.4",
+    "express": "^4.12.4",
+    "mongoose": "^4.0.4",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "chai": "^2.3.0",
+    "karma": "^0.12.33",
+    "karma-chrome-launcher": "^0.1.12",
+    "mocha": "^2.2.5",
+    "supertest": "^1.0.1"
+  },
+  "scripts": {
+    "testData": "node ./models/data.js"
+  }
+}
