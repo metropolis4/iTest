@@ -1,7 +1,7 @@
 var Data = require('../data.js');
 var zlib = require('zlib');
-var fs = require('fs');
-var _ = require('underscore');
+var fs   = require('fs');
+var _    = require('underscore');
 
 var inputData = './node_data_code_test-master/data/access.log.gz';
 

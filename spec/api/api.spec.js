@@ -14,4 +14,18 @@ describe('apiController', function () {
         .expect(200, done);
     });
   });
+  describe('findByHost', function () {
+    it('Should return entries that match a given host', function () {
+      request
+        .get('/findByHost')
+        .expect(200, done);
+    });
+  });
+  describe('findByDate', function () {
+    it('Should return all entries with a given time-stamp', function () {
+      request
+        .get('/findByDate')
+        .expect(200, done);
+    });
+  });
 });

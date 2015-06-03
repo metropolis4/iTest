@@ -12,7 +12,7 @@ module.exports = {
       res.send(result);
     });
   },
-  findByData: function (req, res) {
+  findByDate: function (req, res) {
     Data.find({time: req.params.time}, function (err, result) {
       res.send(result);
     });
