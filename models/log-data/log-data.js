@@ -3,6 +3,14 @@ var zlib = require('zlib');
 var fs   = require('fs');
 var splitter = require('split');
 
+var saveData = function (data) {
+  var newData = new Data(data);
+  newData.save(function (err, result) {
+    if(err) throw err;
+    console.log("data successfully loaded: ", result);
+  });
+};
+
 fs.createReadStream('./node_data_code_test-master/data/access.log.gz')
   .pipe(zlib.createGunzip())
   .pipe(splitter())
@@ -15,9 +23,6 @@ fs.createReadStream('./node_data_code_test-master/data/access.log.gz')
         HttpResponseCode: line[8],
         dataBytes       : line[9]
       };
-    var newData = new Data(dataEntry);
-      newData.save(function (err, result) {
-        if(err) throw err;
-        console.log("data successfully loaded: ", result);
-      });
+
+    saveData(dataEntry);
   });
