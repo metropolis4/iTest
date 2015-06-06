@@ -1,4 +1,4 @@
 module.exports = {
   test: 'mongodb://localhost/iTriageTest',
-  dev : 'mongodb://localhost/iTriage',
+  dev : 'mongodb://localhost/iTriage2',
 };
