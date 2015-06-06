@@ -14,17 +14,24 @@ describe('apiController', function () {
         .expect(200, done);
     });
   });
-  describe('findByHost', function () {
-    it('Should return entries that match a given host', function () {
+  describe('displayByRequest', function () {
+    it('Should return entries that match a given request type', function () {
       request
-        .get('/findByHost')
+        .get('/displayByRequest/get')
         .expect(200, done);
     });
   });
-  describe('findByDate', function () {
+  describe('displayByResponse', function () {
     it('Should return all entries with a given time-stamp', function () {
       request
-        .get('/findByDate')
+        .get('/displayByResponse/200')
+        .expect(200, done);
+    });
+  });
+  describe('domainPercentage', function () {
+    it('Should return the percentage of total for each host domain', function () {
+      request
+        .get('/domainPercentage/.com')
         .expect(200, done);
     });
   });
